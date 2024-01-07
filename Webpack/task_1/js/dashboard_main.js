@@ -1,27 +1,23 @@
 import $ from 'jquery';
 import _ from 'lodash';
 
-$(document).ready(function() {
-    // Create a paragraph element
-    const paragraph = $('<p>').text('Holberton Dashboard');
-    const paragraph2 = $('<p>').text('Dashboard data for the students');
-    const button = $('<button>').text('Click here to get started');
-    const paragraph3 = $('<p id="count"></p>');
-    const paragraph4 = $('<p>').text('Copyright - Holberton School');
+$(function () {
+    $('body').append('<p>Holberton Dashboard</p>');
+    $('body').append('<p>Dashboard data for the students</p>');
+    $('body').append('<button>Click here to get started</button>');
+    $('body').append("<p id='count'></p>");
+    $('body').append('<p>Copyright - Holberton School</p>');
 
-    // Append elements to the body
-    $('body').append(paragraph);
-    $('body').append(paragraph2);
-    $('body').append(button);
-    $('body').append(paragraph3);
-    $('body').append(paragraph4);
-
-    // Function to update the counter
-    const updateCounter = _.debounce(function() {
-        const count = parseInt($('#count').text()) || 0;
-        $('#count').text(`${count + 1} clicks on the button`);
-    }, 500);
-
-    // Bind the debounce function to the click event on the button
-    button.on('click', updateCounter);
+    let debouncedFunc = _.debounce(() => {
+		let count = updateCounter();
+		$('#count').text(`${count} clicks on the button`);
+	});
+	$('button').on('click', debouncedFunc);
 });
+
+let count = 0;
+
+function updateCounter() {
+	count += 1;
+	return count;
+}
