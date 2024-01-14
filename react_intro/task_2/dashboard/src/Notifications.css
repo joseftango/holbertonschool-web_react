@@ -1,6 +1,14 @@
 
 /* Notification section */
 .Notifications {
-	border: 3px solid blue;
+	border: 1px dashed black;
 	padding: 30px;
+	height: 100px;
+}
+
+[data-priority="default"] {
+	color: blue;
+}
+[data-priority="urgent"] {
+	color: red;
 }
