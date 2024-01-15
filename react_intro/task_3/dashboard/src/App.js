@@ -16,14 +16,16 @@ function App() {
       <div className="App-body">
         <p>Login to access the full dashboard</p>
         <div className='inputContainer'>
-        <label onClick={() => focusInput('email')}>Email:</label>
-        <input id='email' type="email" />
-        <label onClick={() => focusInput('password')}>Password:</label>
-        <input id='password' type="password" />
-        <button>OK</button>
+          <label onClick={() => focusInput('email')}>Email:</label>
+          <input id='email' type="email" />
+          <label onClick={() => focusInput('password')}>Password:</label>
+          <input id='password' type="password" />
+          <button>OK</button>
         </div>
       </div>
-      <div className="App-footer"><p>Copyright {getFullYear()} - {getFooterCopy()}</p></div>
+      <div className="App-footer">
+        <p>Copyright {getFullYear()} - {getFooterCopy()}</p>
+      </div>
     </div>
   );
 }
