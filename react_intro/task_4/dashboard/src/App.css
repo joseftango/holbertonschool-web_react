@@ -1,41 +1,47 @@
-/* header properties */
+
 .App-header {
+  text-align: left;
+  color: red;
+  font-size: 20px;
+  border-bottom: 3px solid red;
   display: flex;
-  border-bottom: solid #f40F2C 3px;
-  height: 160px;
 }
 
 .App-header h1 {
-  color: #f40F2C;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 150px;
+  line-height: 200px;
+  margin-left: 50px;
 }
 
-/* body properties */
+.App-header img {
+  width: 200px;
+  height: 200px;
+}
+
 .App-body {
-  height: 350px;
-  border-bottom: solid #f40F2C 3px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 3px solid red;
+  height: 300px;
 }
 
 .App-body p {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 17px;
   margin-top: 50px;
-  margin-left: 50px;
+  margin-left: 30px;
+  font-size: 17px;
 }
 
-.inputContainer {
-  margin-left: 50px;
-}
-.inputContainer label, .inputContainer input {
-  font-size: 17px;
+.App-body input {
+  margin-left: 10px;
   margin-right: 10px;
 }
 
-/* footer properties */
+.App-body label[for="email"] {
+  margin-left: 30px;
+}
+
 .App-footer {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  line-height: 35px;
   text-align: center;
+}
+
+.App-footer p {
+  font-size: 17px;
 }
